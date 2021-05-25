@@ -7,4 +7,16 @@
     background-size: cover;
     //ahora le toca a brand y banner
     //estamos anidando
+    .brand{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .banner{
+        
+    }
+
 }
+
+
