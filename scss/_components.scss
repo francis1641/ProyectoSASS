@@ -1,11 +1,13 @@
 .logo{
+    //font-size:20px;
     font-size:4rem;
     color:$color-primary;
-    //hay que centrar
+    @include flexlayout;
     width: 7rem;
     height: 7rem;
     margin-right:2px;
-    border:3px solid $color-primary;
+    //border:3px solid $color-primary;
+    border:4px solid $color-primary;
     border-radius:50%;
 }
 
@@ -13,14 +15,16 @@
     font-family: $font-nunito;
     font-size: 3rem;
     color:$color-secondary;
-    //hay que darle estilos al texto
+    @include textStyles;
+    
 }
 .sub-name{
     font-family: $font-josefin;
+    //font-size: 10px;
     font-size: 1rem;
     color:$color-secondary;
     text-align: center;
-    //faltan estilos para el texto
+    @include textStyles;
 }
 .main-heading{
     font-family: $font-dancing;
@@ -28,28 +32,75 @@
     font-weight: 300;
     color:$color-primary;
     margin-bottom: 40px;
+
+    @media(min-width:576px){
+        font-size: 5rem;
+    }
+
+    @media(min-width: 768px){
+        font-size: 2rem;
+    }
+
+
+
 }
 .sub-heading{
     font-family: $font-josefin;
+    //font-size: 12px;
     font-size: 3rem;
     font-weight: 300;
     color:$color-secondary;
     margin-bottom: 80px;
+
+
+
+    @media(min-width: 992px){
+        font-size: 3rem;
+    }
 }
 .main-btn{
-    width: 170px;
-    height: 45px;
+    //width: 300;
+    width: 13rem;
+    //height: 45px;
+    height: 3rem;
     font-family: $font-josefin;
-    font-size: 1rem;
+    //font-size: 10px;
+    font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    //letter-spacing:2px;
+    letter-spacing: 0.2rem;
     color:$color-primary;
     background-color: transparent;
-    border:1px solid $color-primary;
+   // border:1px solid $color-primary;
+    border:0.1rem solid $color-primary;
     outline:none;
     cursor:pointer;
     transition: all .4s;
-    //estilos para hover
-    //color de fondo y color de texto
-    
+
+    &:hover{
+        background-color: $color-primary;
+        color: $color-dark;
+    }
+}
+
+
+.card{
+    width: 33.33333%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .card-overlay{
+        left: 0;
+    }
+
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: rgba($color-primary, $alpha: 1.0);
+        color: $color-white;
+        z-index: 10;
+        @include flexlayout;
+    }
 }

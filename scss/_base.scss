@@ -9,6 +9,27 @@ $font-josefin:'Josefin Sans',Sans-serif;
 $font-nunito:'Nunito',Sans-serif;
 
 //zona de mixin
+
+@mixin flexlayout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* flex-direction: column;*/
+}
+
+@mixin textStyles {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+/*  CENTRAR Y POSICIONAR */
+@mixin centering($topvalue) {
+    position: absolute;
+    top: $topvalue;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 //que usaré en el resto de documentos
 
 /*inicializar todos los elementos sin margin y padding*/

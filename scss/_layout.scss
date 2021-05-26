@@ -8,15 +8,41 @@
     //ahora le toca a brand y banner
     //estamos anidando
     .brand{
+        @include centering(15%);
         display: flex;
         align-items: center;
-        flex-direction: column;
+        /*flex-direction: column;*/
+        @media (max-width:500px) {
+            @include centering(12%);   
+        }
     }
 
-    .banner{
-        
+    &-banner{
+        text-align: center;
+        @include centering(60%);
+
+
     }
 
+    .nose{
+        &-left{
+            position: relative;
+            display: none;
+            @media(min-width:768px){
+                width: 40%;
+                display: block;
+                left: -200px;
+            }
+
+            img{
+                    width: 100%;
+                    height: auto;
+                    opacity: 0.7;
+            }
+        }
+    }
+
+    
 }
 
 
