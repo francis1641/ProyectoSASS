@@ -89,6 +89,7 @@
     height: 30vw;
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap;
 
     &:hover .card-overlay{
         left: 0;

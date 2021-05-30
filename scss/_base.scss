@@ -3,8 +3,9 @@ $color-dark:#262626;
 $color-black:#000;
 $color-primary:#d3ab55;
 $color-secondary:#bbb;
+$color-white: white;
 
-$font-dancing:'Dancing Script',cursive;
+$font-dancing:'Dancing Script', 'cursive';
 $font-josefin:'Josefin Sans',Sans-serif;
 $font-nunito:'Nunito',Sans-serif;
 
@@ -14,7 +15,6 @@ $font-nunito:'Nunito',Sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-   /* flex-direction: column;*/
 }
 
 @mixin textStyles {

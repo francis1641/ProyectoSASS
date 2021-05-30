@@ -23,26 +23,111 @@
 
 
     }
+}
 
-    .nose{
-        &-left{
-            position: relative;
-            display: none;
-            @media(min-width:768px){
-                width: 40%;
-                display: block;
-                left: -200px;
-            }
+.about-us{
+    @include flexlayout;
+    padding: 2rem;
 
-            img{
-                    width: 100%;
-                    height: auto;
-                    opacity: 0.7;
-            }
+    &-left{
+        position: relative;
+        display: none;
+        @media(min-width:768px){
+            width: 40%;
+            display: block;
+            left: -300px;
+        }
+        @media(max-width:768px){
+            width: 100%;
+        }
+
+        img{
+                width: 100%;
+                height: auto;
+                opacity: 0.7;
         }
     }
 
+    &-right{
+        @include flexlayout;
+        flex-direction: column;
+
+        @media(min-width:768px){
+            width: 60%;
+            font-size: 1rem;
+
+        }
+        @media(max-width:768px){
+            width: 100%;
+        }
+
+        img{
+                width: 100%;
+                height: auto;
+                opacity: 0.7;
+        }
+
+        .main-heading{
+            font-size: 6rem;
+        }
+
+        .sub-heading{
+            font-size: 4rem;
+        }
+
+        i{
+            color: $color-primary;
+            padding: 2rem 0 2rem 0;
+        }
+
+        .description{
+            @media(min-width:768px){
+                width: 60%;
+                font-size: 1.8rem;
+                justify-content: center;
     
+            }
+            @media(max-width:768px){
+                width: 100%;
+            } 
+            color: $color-white;
+            font-family: $font-dancing;
+            font-size: 2rem;
+
+        }
+    }
+
 }
+
+.cards-wrapper{
+    @include flexlayout
+}
+
+.footer{
+   /* @include flexlayout;
+    flex-direction: column;
+    width:100%;
+    padding: 2rem 0 2rem 0;
+    //height: 100vh;
+    position:relative;
+    //Esto lo puedo hacer en Sass*/
+
+    &-header{
+        @include centering(12%);
+        display: flex;
+        align-items: center;
+    }
+
+    &-social-media{
+        .social-media{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+}
+
+    
+
 
 
