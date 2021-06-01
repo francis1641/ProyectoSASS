@@ -85,11 +85,10 @@
 
 
 .card{
-    width: 33.33333%;
+    width: 33.3%;
     height: 30vw;
     position: relative;
     overflow: hidden;
-    flex-wrap: wrap;
 
     &:hover .card-overlay{
         left: 0;
@@ -99,9 +98,31 @@
         position: absolute;
         top: 0;
         left: -100%;
-        background-color: rgba($color-primary, $alpha: 1.0);
+        background-color: rgba($color-primary, .6);
         color: $color-white;
-        z-index: 10;
+        z-index: 3;
         @include flexlayout;
+        flex-direction: column;
+        @extend %fullspace;
+        transition: left .7;
+
+        &-heading{
+        
+        }
+
+        &-paragraph{
+
+        }
+        &-btn{
+            
+        }
+    }
+
+
+
+    &-img{
+        @extend %fullspace;
+        object-fit: cover;
+        opacity: .5;
     }
 }

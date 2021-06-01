@@ -2,14 +2,28 @@
 /*aquí debes escribir los import 
 en el orden adecuado*/
 /*variables*/
+/*
+$color:(
+    "dark" :#262626,
+
+)
+
+*/
 /*  CENTRAR Y POSICIONAR */
+.card-img, .card-overlay {
+  width: 100%;
+  height: 100%;
+}
+
 /*inicializar todos los elementos sin margin y padding*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  background-color: #262626; }
+  background-color: #262626;
+}
 
 .logo {
   font-size: 4rem;
@@ -21,7 +35,8 @@ body {
   height: 7rem;
   margin-right: 2px;
   border: 4px solid #d3ab55;
-  border-radius: 50%; }
+  border-radius: 50%;
+}
 
 .main-name {
   font-family: "Nunito", Sans-serif;
@@ -29,7 +44,8 @@ body {
   color: #bbb;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .sub-name {
   font-family: "Josefin Sans", Sans-serif;
@@ -38,30 +54,39 @@ body {
   text-align: center;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .main-heading {
   font-family: "Dancing Script", "cursive";
   font-size: 6rem;
   font-weight: 300;
   color: #d3ab55;
-  margin-bottom: 40px; }
-  @media (min-width: 576px) {
-    .main-heading {
-      font-size: 5rem; } }
-  @media (min-width: 768px) {
-    .main-heading {
-      font-size: 2rem; } }
+  margin-bottom: 40px;
+}
+@media (min-width: 576px) {
+  .main-heading {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+}
 
 .sub-heading {
   font-family: "Josefin Sans", Sans-serif;
   font-size: 3rem;
   font-weight: 300;
   color: #bbb;
-  margin-bottom: 80px; }
-  @media (min-width: 992px) {
-    .sub-heading {
-      font-size: 3rem; } }
+  margin-bottom: 80px;
+}
+@media (min-width: 992px) {
+  .sub-heading {
+    font-size: 3rem;
+  }
+}
 
 .main-btn {
   width: 13rem;
@@ -75,133 +100,196 @@ body {
   border: 0.1rem solid #d3ab55;
   outline: none;
   cursor: pointer;
-  transition: all .4s; }
-  .main-btn:hover {
-    background-color: #d3ab55;
-    color: #262626; }
+  transition: all 0.4s;
+}
+.main-btn:hover {
+  background-color: #d3ab55;
+  color: #262626;
+}
 
 .card {
-  width: 33.33333%;
+  width: 33.3%;
   height: 30vw;
   position: relative;
   overflow: hidden;
-  flex-wrap: wrap; }
-  .card:hover .card-overlay {
-    left: 0; }
-  .card-overlay {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    background-color: #d3ab55;
-    color: white;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+}
+.card:hover .card-overlay {
+  left: 0;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(211, 171, 85, 0.6);
+  color: white;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: left 0.7;
+}
+.card-img {
+  object-fit: cover;
+  opacity: 0.5;
+}
 
 .header {
   width: 100%;
   height: 100vh;
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
+.header .brand {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  /*flex-direction: column;*/
+}
+@media (max-width: 500px) {
   .header .brand {
     position: absolute;
-    top: 15%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    /*flex-direction: column;*/ }
-    @media (max-width: 500px) {
-      .header .brand {
-        position: absolute;
-        top: 12%;
-        left: 50%;
-        transform: translate(-50%, -50%); } }
-  .header-banner {
-    text-align: center;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  }
+}
+.header-banner {
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .about-us {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem; }
+  padding: 2rem;
+  align-items: center;
+}
+.about-us-left {
+  position: relative;
+  display: none;
+}
+@media (min-width: 768px) {
   .about-us-left {
-    position: relative;
-    display: none; }
-    @media (min-width: 768px) {
-      .about-us-left {
-        width: 40%;
-        display: block;
-        left: -300px; } }
-    @media (max-width: 768px) {
-      .about-us-left {
-        width: 100%; } }
-    .about-us-left img {
-      width: 100%;
-      height: auto;
-      opacity: 0.7; }
-  .about-us-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-    @media (min-width: 768px) {
-      .about-us-right {
-        width: 60%;
-        font-size: 1rem; } }
-    @media (max-width: 768px) {
-      .about-us-right {
-        width: 100%; } }
-    .about-us-right img {
-      width: 100%;
-      height: auto;
-      opacity: 0.7; }
-    .about-us-right .main-heading {
-      font-size: 6rem; }
-    .about-us-right .sub-heading {
-      font-size: 4rem; }
-    .about-us-right i {
-      color: #d3ab55;
-      padding: 2rem 0 2rem 0; }
-    .about-us-right .description {
-      color: white;
-      font-family: "Dancing Script", "cursive";
-      font-size: 2rem; }
-      @media (min-width: 768px) {
-        .about-us-right .description {
-          width: 60%;
-          font-size: 1.8rem;
-          justify-content: center; } }
-      @media (max-width: 768px) {
-        .about-us-right .description {
-          width: 100%; } }
-
-.cards-wrapper {
+    width: 40%;
+    display: block;
+    left: -300px;
+  }
+}
+.about-us-left img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+.about-us-right {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .about-us-right {
+    width: 60%;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-us-right {
+    width: 100%;
+  }
+}
+.about-us-right img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+.about-us-right .main-heading {
+  font-size: 6rem;
+}
+.about-us-right .sub-heading {
+  font-size: 4rem;
+}
+.about-us-right .stars {
+  margin: 20px 0;
+}
+@media (min-width: 576px) {
+  .about-us-right .stars {
+    margin: 30px 0;
+  }
+}
+.about-us-right .star {
+  color: #d3ab55;
+  font-size: 0.5rem;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .about-us-right .star {
+    font-size: 1rem;
+  }
+}
+.about-us-right .description {
+  color: white;
+  font-family: "Dancing Script", "cursive";
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: justify;
+}
+@media (min-width: 576px) {
+  .about-us-right .description {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .about-us-right .description {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .about-us-right .description {
+    font-size: 1.8rem;
+  }
+}
+.about-us-right .description::first-letter {
+  padding-left: 50px;
+}
+
+.gallery {
+  width: 100%;
+}
+.gallery .cards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 .footer {
   /* @include flexlayout;
-    flex-direction: column;
-    width:100%;
-    padding: 2rem 0 2rem 0;
-    //height: 100vh;
-    position:relative;
-    //Esto lo puedo hacer en Sass*/ }
-  .footer-header {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center; }
-  .footer-social-media .social-media {
-    display: flex;
-    align-items: center; }
+   flex-direction: column;
+   width:100%;
+   padding: 2rem 0 2rem 0;
+   //height: 100vh;
+   position:relative;
+   //Esto lo puedo hacer en Sass*/
+  width: 100%;
+  padding: 30px 0;
+  /*&-header{
+      @include centering(280%);
+      display: flex;
+      align-items: center;
+  }*/
+}
+.footer-social-media .social-media {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */

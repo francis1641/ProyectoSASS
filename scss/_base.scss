@@ -9,6 +9,15 @@ $font-dancing:'Dancing Script', 'cursive';
 $font-josefin:'Josefin Sans',Sans-serif;
 $font-nunito:'Nunito',Sans-serif;
 
+// PARA MEJORAR LOS COLORES HACER CON MAP
+
+/*
+$color:(
+    "dark" :#262626,
+
+)
+
+*/
 //zona de mixin
 
 @mixin flexlayout {
@@ -29,6 +38,23 @@ $font-nunito:'Nunito',Sans-serif;
     top: $topvalue;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+@mixin tamanofuente($sm, $md, $lg) {
+    @media(min-width: 576px) {
+        font-size: $sm;
+    }
+    @media (min-width:768px) {
+        font-size: $md;
+    }
+    @media (min-width:992px) {
+        font-size: $lg;
+    }
+}
+
+%fullspace{
+    width:100%;
+    height: 100%;
 }
 //que usaré en el resto de documentos
 

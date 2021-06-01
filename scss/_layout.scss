@@ -28,6 +28,7 @@
 .about-us{
     @include flexlayout;
     padding: 2rem;
+    align-items: center;
 
     &-left{
         position: relative;
@@ -36,9 +37,6 @@
             width: 40%;
             display: block;
             left: -300px;
-        }
-        @media(max-width:768px){
-            width: 100%;
         }
 
         img{
@@ -49,8 +47,10 @@
     }
 
     &-right{
+        width: 100%;
         @include flexlayout;
         flex-direction: column;
+        box-sizing: border-box;
 
         @media(min-width:768px){
             width: 60%;
@@ -75,32 +75,44 @@
             font-size: 4rem;
         }
 
-        i{
+        .stars{
+            margin: 20px 0;
+            @media (min-width:576px) {
+                margin: 30px 0;
+            }
+        }
+
+        .star{
             color: $color-primary;
-            padding: 2rem 0 2rem 0;
+            font-size: .5rem;
+            margin-left: 10px;
+            @media (min-width:768px) {
+                font-size: 1rem;
+            }
         }
 
         .description{
-            @media(min-width:768px){
-                width: 60%;
-                font-size: 1.8rem;
-                justify-content: center;
-    
-            }
-            @media(max-width:768px){
-                width: 100%;
-            } 
             color: $color-white;
             font-family: $font-dancing;
-            font-size: 2rem;
+            font-size: .8rem;
+            font-style: italic;
+            text-align: justify;
+            @include tamanofuente(1rem, 1.2rem , 1.8rem);
+            &::first-letter{
+                padding-left: 50px;
+            }
 
         }
     }
 
 }
+.gallery{
+    width: 100%;
+    .cards-wrapper{
+        display: flex;
+        flex-flow: row wrap;
 
-.cards-wrapper{
-    @include flexlayout
+    }
 }
 
 .footer{
@@ -111,12 +123,13 @@
     //height: 100vh;
     position:relative;
     //Esto lo puedo hacer en Sass*/
-
-    &-header{
-        @include centering(12%);
+    width: 100%;
+    padding: 30px 0;
+    /*&-header{
+        @include centering(280%);
         display: flex;
         align-items: center;
-    }
+    }*/
 
     &-social-media{
         .social-media{
