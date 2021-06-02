@@ -116,29 +116,74 @@
 }
 
 .footer{
-   /* @include flexlayout;
+
+    @include flexlayout;
     flex-direction: column;
-    width:100%;
-    padding: 2rem 0 2rem 0;
-    //height: 100vh;
-    position:relative;
-    //Esto lo puedo hacer en Sass*/
     width: 100%;
     padding: 30px 0;
-    /*&-header{
-        @include centering(280%);
+
+    @media (min-width:576px) {
+        padding: 70px 0;
+    }
+
+    &-header{
         display: flex;
         align-items: center;
-    }*/
+        margin-bottom: 30px;
+        .main-name{
+            @include tamanofuente(1rem, 1.2rem, 1.8rem)
+        }
+        .sub-name{
+            @include tamanofuente(1rem, 1.2rem, 1.8rem);
+        }
+    }
 
     &-social-media{
         .social-media{
             display: flex;
-            align-items: center;
+            width: 200px;
+            justify-content: space-between;
+            margin-bottom: 40px;
+           
+            @media (min-width:768px) {
+                width: 400px;
+                margin-bottom: 70px;
+            }
+
+            &-item{
+                list-style: none;
+            }
+
+            &-link{
+                text-decoration: none;
+                font-style: 1.2rem;
+                color: $color-secondary;
+                transition: color .6s;
+                @include tamanofuente(1.2rem, 1.5rem, 1.8rem);
+
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &-copyright{
+        &-paragraph{
+            font-family: $font-josefin;
+            font-size: 0.75rem;
+            color: $color-secondary;
+            @include textStyles(capitalize);
+        
+            @media (min-width:576px) {
+                
+            }
+        
         }
     }
 
 }
+
 
     
 

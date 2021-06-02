@@ -120,14 +120,101 @@ body {
   position: absolute;
   top: 0;
   left: -100%;
-  background-color: rgba(211, 171, 85, 0.6);
+  background-color: rgba(211, 171, 85, 0.4);
   color: white;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: left 0.7;
+  transition: left 0.8s;
+}
+.card-overlay-heading {
+  font-family: "Nunito", Sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media (min-width: 576px) {
+  .card-overlay-heading {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .card-overlay-heading {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .card-overlay-heading {
+    font-size: 3rem;
+  }
+}
+.card-overlay-paragraph {
+  font-family: "Josefin Sans", Sans-serif;
+  font-style: 0.8rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media (min-width: 576px) {
+  .card-overlay-paragraph {
+    font-size: 1;
+  }
+}
+@media (min-width: 768px) {
+  .card-overlay-paragraph {
+    font-size: 1.2;
+  }
+}
+@media (min-width: 992px) {
+  .card-overlay-paragraph {
+    font-size: 1.8;
+  }
+}
+.card-overlay-btn {
+  width: 100px;
+  height: 30px;
+  color: #d3ab55;
+  background-color: white;
+  font-family: "Josefin Sans", Sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #d3ab55;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .card-overlay-btn {
+    font-size: 1.2;
+  }
+}
+@media (min-width: 768px) {
+  .card-overlay-btn {
+    font-size: 1.5;
+  }
+}
+@media (min-width: 992px) {
+  .card-overlay-btn {
+    font-size: 2;
+  }
+}
+@media (min-width: 768px) {
+  .card-overlay-btn {
+    width: 130px;
+    height: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .card-overlay-btn {
+    width: 150px;
+    height: 40px;
+  }
 }
 .card-img {
   object-fit: cover;
@@ -272,24 +359,99 @@ body {
 }
 
 .footer {
-  /* @include flexlayout;
-   flex-direction: column;
-   width:100%;
-   padding: 2rem 0 2rem 0;
-   //height: 100vh;
-   position:relative;
-   //Esto lo puedo hacer en Sass*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   padding: 30px 0;
-  /*&-header{
-      @include centering(280%);
-      display: flex;
-      align-items: center;
-  }*/
+}
+@media (min-width: 576px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+.footer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+@media (min-width: 576px) {
+  .footer-header .main-name {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer-header .main-name {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer-header .main-name {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 576px) {
+  .footer-header .sub-name {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer-header .sub-name {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer-header .sub-name {
+    font-size: 1.8rem;
+  }
 }
 .footer-social-media .social-media {
   display: flex;
-  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .footer-social-media .social-media {
+    width: 400px;
+    margin-bottom: 70px;
+  }
+}
+.footer-social-media .social-media-item {
+  list-style: none;
+}
+.footer-social-media .social-media-link {
+  text-decoration: none;
+  font-style: 1.2rem;
+  color: #bbb;
+  transition: color 0.6s;
+}
+@media (min-width: 576px) {
+  .footer-social-media .social-media-link {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer-social-media .social-media-link {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .footer-social-media .social-media-link {
+    font-size: 1.8rem;
+  }
+}
+.footer-social-media .social-media-link:hover {
+  color: #d3ab55;
+}
+.footer-copyright-paragraph {
+  font-family: "Josefin Sans", Sans-serif;
+  font-size: 0.75rem;
+  color: #bbb;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */
