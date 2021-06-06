@@ -11,13 +11,26 @@ $font-nunito:'Nunito',Sans-serif;
 
 // PARA MEJORAR LOS COLORES HACER CON MAP
 
-/*
+
+
+
 $color:(
     "dark" :#262626,
-
-)
-
+    "black": #000,
+    "primary": #d3ab55,
+    "secondary": #bbb,
+    "white": white,
+);
+/*
+$font-family:(
+    "dancing": 'Dancing Script', 'cursive',
+    "josefin":'Josefin Sans','Sans-serif',
+    "nunito": 'Nunito','Sans-serif',
+);
 */
+
+
+
 //zona de mixin
 
 @mixin flexlayout {
@@ -56,6 +69,10 @@ $color:(
     width:100%;
     height: 100%;
 }
+
+@function obtenerColor($nombre){
+    @return map-get($color , $nombre);
+}
 //que usaré en el resto de documentos
 
 /*inicializar todos los elementos sin margin y padding*/
@@ -64,5 +81,5 @@ $color:(
     padding:0;
 }
 body{
-    background-color:$color-dark;
+    background-color: obtenerColor("dark");
 }

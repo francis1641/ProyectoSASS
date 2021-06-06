@@ -3,7 +3,7 @@
     height: 100vh;
     position:relative;
     //Esto lo puedo hacer en Sass
-    background:linear-gradient(rgba($color-black,.8), rgba($color-black,.6) ),url(../images/bg.jpeg) center no-repeat;
+    background:linear-gradient(rgba(obtenerColor("dark"),.8), rgba(obtenerColor("black"),.6) ),url(../images/bg.jpeg) center no-repeat;
     background-size: cover;
     //ahora le toca a brand y banner
     //estamos anidando
@@ -83,7 +83,7 @@
         }
 
         .star{
-            color: $color-primary;
+            color: obtenerColor("primary");
             font-size: .5rem;
             margin-left: 10px;
             @media (min-width:768px) {
@@ -92,7 +92,7 @@
         }
 
         .description{
-            color: $color-white;
+            color: obtenerColor("white");
             font-family: $font-dancing;
             font-size: .8rem;
             font-style: italic;
@@ -157,12 +157,12 @@
             &-link{
                 text-decoration: none;
                 font-style: 1.2rem;
-                color: $color-secondary;
+                color: obtenerColor("secondary");
                 transition: color .6s;
                 @include tamanofuente(1.2rem, 1.5rem, 1.8rem);
 
                 &:hover{
-                    color: $color-primary;
+                    color: obtenerColor("primary");
                 }
             }
         }
@@ -172,7 +172,7 @@
         &-paragraph{
             font-family: $font-josefin;
             font-size: 0.75rem;
-            color: $color-secondary;
+            color: obtenerColor("secondary");
             @include textStyles(capitalize);
         
             @media (min-width:576px) {
