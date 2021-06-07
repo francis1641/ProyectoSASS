@@ -9,11 +9,6 @@ $font-dancing:'Dancing Script', 'cursive';
 $font-josefin:'Josefin Sans',Sans-serif;
 $font-nunito:'Nunito',Sans-serif;
 
-// PARA MEJORAR LOS COLORES HACER CON MAP
-
-
-
-
 $color:(
     "dark" :#262626,
     "black": #000,
@@ -21,6 +16,7 @@ $color:(
     "secondary": #bbb,
     "white": white,
 );
+
 /*
 $font-family:(
     "dancing": 'Dancing Script', 'cursive',
@@ -28,10 +24,6 @@ $font-family:(
     "nunito": 'Nunito','Sans-serif',
 );
 */
-
-
-
-//zona de mixin
 
 @mixin flexlayout {
     display: flex;
@@ -73,9 +65,7 @@ $font-family:(
 @function obtenerColor($nombre){
     @return map-get($color , $nombre);
 }
-//que usaré en el resto de documentos
 
-/*inicializar todos los elementos sin margin y padding*/
 * {
     margin:0;
     padding:0;
